@@ -32,7 +32,6 @@ document.querySelector('.btn-hold').addEventListener("click",function()
     {
         scores[activePlayer]+=roundScore;
         document.getElementById('score-'+activePlayer).textContent=scores[activePlayer];
-
         if(scores[activePlayer]>=100)
         {
             document.getElementById('name'+activePlayer).textContent='Abbiamo un vincitore!';
@@ -78,8 +77,8 @@ current0.textContent='0';
 current1.textContent='0';
 document.getElementById('score-0').textContent=0;
 document.getElementById('score-1').textContent=0;
-document.querySelector('#name-0').textContent='Player 1';
-document.querySelector('#name-1').textContent='Player 2';
+document.querySelector('#name-0').textContent='Giocatore 1';
+document.querySelector('#name-1').textContent='Giocatore 2';
 
 //Changing the css-so the dice is not displayed initially
 document.querySelector('.dice').style.display='none';
