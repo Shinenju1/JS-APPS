@@ -50,7 +50,7 @@ body {
     text-align: center;
     font-size: 35px;
     font-weight: 200;
-    color: royalblue
+    color: royalblue;
     margin-bottom: 130px;
 }
 .active {background-color:#e8e3e3; }
@@ -69,10 +69,12 @@ body {
     margin-bottom: 15px;
     font-size: 12px;
     color: #222;
+    text-align: center;
 }
 .player-current-score {
-    font-size: 30px
-    align: center;
+    font-size: 30px;
+    box-align:right;
+    text-align: center;
 }
 .btn-roll {
     position: absolute;
@@ -101,7 +103,7 @@ button {
     transition: background-color 0.3s, color 0.3s;
 }
 button:hover {font-weight: 600; color:crimson }
-button:hover i {margin-right: 10px; margin-top;: 10px}
+button:hover i {margin-right: 10px; margin-top: 10px}
 
 button:focus {
     outline: none
