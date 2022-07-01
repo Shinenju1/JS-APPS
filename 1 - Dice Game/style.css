@@ -66,9 +66,9 @@ body {
 }
 .player-current-label {
     text-transform: uppercase;
-    margin-bottom: 10px;
-    font-size: 12px
-    
+    margin-bottom: 15px;
+    font-size: 12px;
+    color: #222;
 }
 .player-current-score {
     font-size: 30px
