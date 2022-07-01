@@ -42,9 +42,9 @@ document.querySelector('.btn-hold').addEventListener("click",function()
             gamePlaying = false;
 
         }
-    else{
-        nextPlayer();
-    }
+else{
+    nextPlayer();
+}
     }
 });
 
