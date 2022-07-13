@@ -11,3 +11,15 @@ function updateDisplay() {
     display.value = calculator.displayValue;
 }
 updateDisplay();
+
+const keys = document.querySelector('.buttons');
+keys.addEventListener('click', (event) => {
+    const { target } = event;
+
+    if (!target.matches('button')) {
+        return;
+    }
+    if (target.classList.contains('operator')) {
+        console.log('operator', target.value);
+    }
+});
