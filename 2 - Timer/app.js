@@ -1,7 +1,7 @@
-const timeDisplay = document.querySelector("#timeDisplay");
-const startBtn = document.querySelector('#startBtn');
-const pauseBtn = document.querySelector('#pauseBtn');
-const resetBtn = document.querySelector('#resetBtn');
+const timeDisplay = document.getElementById(".timeDisplay");
+const startBtn = document.getElementById('.startBtn');
+const pauseBtn = document.getElementById('.pauseBtn');
+const resetBtn = document.getElementById('.resetBtn');
 
 let startTime = 0;
 let elapsedTime = 0;
