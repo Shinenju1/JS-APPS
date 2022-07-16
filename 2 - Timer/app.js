@@ -1,41 +1,41 @@
-const timeDisplay = document.getElementById(".timeDisplay");
-const startBtn = document.getElementById('.startBtn');
-const pauseBtn = document.getElementById('.pauseBtn');
-const resetBtn = document.getElementById('.resetBtn');
+const timeDisplay = document.querySelector("#timeDisplay");
+const startBtn = document.querySelector("#startBtn");
+const pauseBtn = document.querySelector("#pauseBtn");
+const resetBtn = document.querySelector("#resetBtn");
 
 let startTime = 0;
 let elapsedTime = 0;
 let currentTime = 0;
 let paused = true;
-let intervalID;
+let intervalId;
 let hrs = 0;
 let mins = 0;
 let secs = 0;
 
-startBtn.addEventListener("click", ()=> {
+startBtn.addEventListener("click", () => {
     if(paused){
-        paused=false;
-        startTime =Date.now() - elapsedTime;
-        intervalID = setInterval(updateTime, 1000);
+        paused = false;
+        startTime = Date.now() - elapsedTime;
+        intervalId = setInterval(updateTime, 1000);
     }
 });
-
-pauseBtn.addEventListener('click', () => {
+pauseBtn.addEventListener("click", () => {
     if(!paused){
-        paused = true;elapsedTime = Datenow()- startTime;
-        clearInterval(intervalID);
+        paused = true;
+        elapsedTime = Date.now() - startTime;
+        clearInterval(intervalId);
     }
 });
-resetBtn.addEventListener('click', () => {
+resetBtn.addEventListener("click", () => {
     paused = true;
-    clearInterval(intervalID);
+    clearInterval(intervalId);
     startTime = 0;
     elapsedTime = 0;
     currentTime = 0;
-    hrs = 0; 
+    hrs = 0;
     mins = 0;
     secs = 0;
-    timeDisplay.textContent ="00:00:00"
+    timeDisplay.textContent = "00:00:00";
 });
 
 function updateTime(){
@@ -52,7 +52,6 @@ function updateTime(){
     timeDisplay.textContent = `${hrs}:${mins}:${secs}`;
 
     function pad(unit){
-        return (("0")+unit).length > 2 ? unit : "0" + unit;
-
+        return (("0") + unit).length > 2 ? unit : "0" + unit;
     }
 }
