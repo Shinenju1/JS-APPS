@@ -3,12 +3,20 @@
     height: 75px;
     border: 2px solid;
     box-shadow: 0 0 0 2px;
-    line-height: 65px;
+    line-height: 75px;
+    font-size: 50px;
 }
-
+h1{
+    text-align: center;
+}
 #cellContainer{
     display: grid;
     grid-template-columns: repeat(3, auto);
     width: 225px;
-    margin. auto;
+    margin: auto;
+}
+
+#gameContainer{
+    font-family: "Helvetica", cursive;
+    text-align: center;
 }
