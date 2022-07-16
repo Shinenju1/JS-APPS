@@ -14,10 +14,12 @@ const winConditions = [
 let options = ["", "", "", "", "", "", "", "", ""];
 let currentPlayer = "X";
 let running = false;
+initializeGame();
 
 function initializeGame() {
-    cells.forEach(cell => cell.addEventListener('click', cellClicked()));
-    restartBtn.addEventListener('click', restartGame())
+    cells.forEach(cell => cell.addEventListener('click', cellClicked));
+    restartBtn.addEventListener('click', restartGame());
+    running= true;
 }
 
 function cellClicked() {
@@ -30,6 +32,8 @@ function cellClicked() {
 
 }
 function updateCell(cell, index){
+    options[index] = currentPlayer;
+    cell.textContent = currentPlayer;
 
 }
 function checkWinner(){
