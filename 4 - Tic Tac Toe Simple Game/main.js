@@ -2,7 +2,7 @@ const cells = document.querySelectorAll(".cell");
 const statusText = document.querySelector("#statusText");
 const restartBtn = document.querySelector("#restartBtn");
 const winConditions = [
-    [0 , 1, 2],
+    [0, 1, 2],
     [3, 4, 5],
     [6, 7, 8],
     [0, 3, 6],
@@ -39,7 +39,7 @@ function updateCell(cell, index){
 }
 function changePlayer(){
     currentPlayer = (currentPlayer == "X") ? "O": "X";
-    statusText.textContent = `${currentPlayer}'s turn`
+    statusText.textContent = `${currentPlayer}'s turn`;
 }
 function checkWinner(){
     let roundWon = false;
@@ -56,22 +56,25 @@ function checkWinner(){
         if(cellA == cellB && cellB == cellC){
             roundWon = true;
             break;
-
         }
-        if(roundWon){
-            statusText.textContent = `${currentPlayer} wins!`;
-            running= false;
-        }
-        else if(!options.includes("")){
-            statusText.textContent = "Draw!";
-        }
-        else{
-            changePlayer();
-        }
-
+    }
+    if(roundWon){
+        statusText.textContent = `${currentPlayer} wins!`;
+        running= false;
+    }
+    else if(!options.includes("")){
+        statusText.textContent = "Draw!";
+    }
+    else{
+        changePlayer();
     }
 
 }
 function restartGame(){
+    currentPlayer = "X";
+    options = ["", "", "", "", "", "", "", "", "",]
+    statusText.textContent = `${currentPlayer}'s turn`;
+    cells.forEach(cell => cell.textContent="");
+    running=true;
 
 }
