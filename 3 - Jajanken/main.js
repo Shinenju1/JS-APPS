@@ -28,7 +28,7 @@ function computerTurn(){
             break;
         case 3:
             computer = "PAPER"
-            break:
+            break;
     }
 }
 function checkWinner(){
