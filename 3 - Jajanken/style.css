@@ -1,0 +1,13 @@
+.choiceBtn{
+    line-height: 30px;
+    
+}
+
+#gameDiv{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: 3px solid;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+
+}
