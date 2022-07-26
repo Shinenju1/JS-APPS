@@ -9,15 +9,17 @@
 
 </head>
 <body>
-    <canvas id="myCanvas" width="960" height="640"></canvas>
+    <canvas id="myCanvas" width="480" height="320"></canvas>
 
     <script>
         var canvas = document.getElementById("myCanvas");
         var ctx = canvas.getContext("2d");
         var ballRadius = 10;
         var paddleHeight = 10;
-        var paddleWidth = 50;
+        var paddleWidth = 75;
         var paddleX = (canvas.width-paddleWidth) / 2;
+        var rightPressed = false;
+        var leftPressed = false;
     
         ctx.beginPath();
         ctx.rect(160, 10, 100, 40);
@@ -31,12 +33,20 @@
         let dy = -2;
 
         function drawBall() {
-        ctx.beginPath();
-        ctx.arc(x, y, ballRadius, 0, Math.PI*2);
-        ctx.fillStyle = "crimson";
-        ctx.fill();
-        ctx.closePath();
+            ctx.beginPath();
+            ctx.arc(x, y, ballRadius, 0, Math.PI*2);
+            ctx.fillStyle = "crimson";
+            ctx.fill();
+            ctx.closePath();
         }
+
+        function drawPaddle() {
+            ctx.beginPath();
+            ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
+            ctx.fillStyle = "crimson";
+            ctx.fill();
+            ctx.closePath();
+        }        
 
         function draw() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -54,12 +64,9 @@
                 ctx.fillStyle = randomColor;
             }
         }
-
-        function drawPaddle(){
-            ctx.begi
-        }
-
         
+        document.addEventListener('keydown', keyDownHandler, false);
+        document.addEventListener('keyup', keyUpHandler, false);
         setInterval(draw, 10);
     </script>
 
